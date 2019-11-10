@@ -2,6 +2,9 @@
 
 #include <printf.h>
 
+#include "SEGGER_SYSVIEW_Conf.h"
+#include "SEGGER_SYSVIEW.h"
+
 #define SFUD_DEMO_TEST_BUFFER_SIZE                     1024
 
 static void sfud_demo(uint32_t addr, size_t size, uint8_t *data);
@@ -11,6 +14,7 @@ static uint8_t sfud_demo_test_buf[SFUD_DEMO_TEST_BUFFER_SIZE];
 extern int lwmem_init(void);
 
 void sufd_test(void) {
+    SEGGER_SYSVIEW_Conf();            /* Configure and initialize SystemView  */
 
     /* SFUD initialize */
     if (lwmem_init() == 0 && sfud_init() == SFUD_SUCCESS) {

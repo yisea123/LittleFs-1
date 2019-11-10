@@ -2,9 +2,11 @@
 #include <fal.h>
 #include <sfud.h>
 
+#include "SEGGER_SYSVIEW_Conf.h"
+#include "SEGGER_SYSVIEW.h"
+
 /* LittleFs partition name on FAL partition table */
 #define FAL_FS_PART_NAME               "littlefs"
-
 
 // variables used by the filesystem
 lfs_t lfs;
@@ -94,6 +96,8 @@ void ls( void )
 // entry point
 void lfs_test(void) {
     const struct fal_partition *fal_part;
+
+    SEGGER_SYSVIEW_Conf();            /* Configure and initialize SystemView  */
 
     if (lwmem_init() == 0 && sfud_init() == SFUD_SUCCESS && fal_init() > 0) {
         /* test Env demo */

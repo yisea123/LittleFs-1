@@ -27,9 +27,6 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "SEGGER_SYSVIEW_Conf.h"
-#include "SEGGER_SYSVIEW.h"
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -99,8 +96,6 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
-
-  SEGGER_SYSVIEW_Conf();            /* Configure and initialize SystemView  */
 
   /* USER CODE END 2 */
 
@@ -172,11 +167,7 @@ void SystemClock_Config(void)
  ***************************************************************************************************/
 void HAL_IncTick(void)
 {
-  SEGGER_SYSVIEW_RecordEnterISR();
-
   uwTick += uwTickFreq;
-
-  SEGGER_SYSVIEW_RecordExitISR();
 }
 
 /* USER CODE END 4 */

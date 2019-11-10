@@ -3,6 +3,9 @@
 
 #include <printf.h>
 
+#include "SEGGER_SYSVIEW_Conf.h"
+#include "SEGGER_SYSVIEW.h"
+
 #define BUF_SIZE                        1024
 
 static uint8_t buf[BUF_SIZE];
@@ -13,6 +16,7 @@ extern int lwmem_init(void);
 
 int fal_test(void)
 {
+    SEGGER_SYSVIEW_Conf();            /* Configure and initialize SystemView  */
 
     if (lwmem_init() == 0 && sfud_init() == SFUD_SUCCESS && fal_init() > 0) {
         /* test Env demo */
