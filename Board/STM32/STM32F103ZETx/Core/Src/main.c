@@ -48,9 +48,6 @@
 
 /* USER CODE BEGIN PV */
 
-extern __IO uint32_t uwTick;
-extern HAL_TickFreqTypeDef uwTickFreq;  /* 1KHz */
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -148,27 +145,6 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
-
-/***************************************************************************************************
- * @fn      This function is called to increment  a global variable "uwTick"
- *          used as application time base.
- *
- * @note    In the default implementation, this variable is incremented each 1ms
- *          in SysTick ISR.
- * 
- * @note This function is declared as __weak to be overwritten in case of other
- *      implementations in user file.
- * 
- * @brief   The Systick Interrupt module
- *
- * @param   None
- *
- * @return  None
- ***************************************************************************************************/
-void HAL_IncTick(void)
-{
-  uwTick += uwTickFreq;
-}
 
 /* USER CODE END 4 */
 

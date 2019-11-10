@@ -357,12 +357,12 @@
           <state>$PROJ_DIR$/../Drivers/CMSIS/Include</state>
           <state>$PROJ_DIR$/../Middlewares/Fal/Cfg</state>
           <state>$PROJ_DIR$/../Middlewares/Fal/Port</state>
+          <state>$PROJ_DIR$/../Middlewares/LittleFs/Cfg</state>
           <state>$PROJ_DIR$/../Middlewares/Lwmem/Cfg</state>
           <state>$PROJ_DIR$/../Middlewares/Lwmem/Port</state>
           <state>$PROJ_DIR$/../Middlewares/SUFD/Cfg</state>
           <state>$PROJ_DIR$/../Middlewares/SystemView/Config</state>
           <state>$PROJ_DIR$/../../../../Middlewares/Fal/Source</state>
-          <state>$PROJ_DIR$/../../../../Middlewares/LittleFs/Cfg</state>
           <state>$PROJ_DIR$/../../../../Middlewares/LittleFs/Source</state>
           <state>$PROJ_DIR$/../../../../Middlewares/Lwmem/Source</state>
           <state>$PROJ_DIR$/../../../../Middlewares/Printf/Source</state>
@@ -1225,13 +1225,13 @@
       <group>
         <name>Cfg</name>
         <file>
-          <name>$PROJ_DIR$\..\..\..\..\Middlewares\LittleFs\Cfg\lfs_util.h</name>
+          <name>$PROJ_DIR$\..\Middlewares\LittleFs\Cfg\lfs_util.h</name>
         </file>
       </group>
       <group>
         <name>Port</name>
         <file>
-          <name>$PROJ_DIR$\..\..\..\..\Middlewares\LittleFs\Port\lfs_util.c</name>
+          <name>$PROJ_DIR$\..\Middlewares\LittleFs\Port\lfs_util.c</name>
         </file>
       </group>
       <group>
@@ -1246,7 +1246,7 @@
       <group>
         <name>Test</name>
         <file>
-          <name>$PROJ_DIR$\..\..\..\..\Middlewares\LittleFs\Test\littlefs_test.c</name>
+          <name>$PROJ_DIR$\..\Middlewares\LittleFs\Test\littlefs_test.c</name>
         </file>
       </group>
     </group>
